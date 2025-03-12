@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Gitant';
+    src: url('../font/GitanLatn-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gitant';
+    src: url('../font/GitanLatn-Bd.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gitant';
+    src: url('../font/GitanLatn-Eb.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gitant4';
+    src: url('../font/GitanLatn-Me.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gitant5';
+    src: url('../font/GitanLatn-Sb.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BigShoulders';
+    src: url('../font/GitanLatn-Sb.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

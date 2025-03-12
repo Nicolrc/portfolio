@@ -1,6 +1,6 @@
 .reseaux img {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
 }
 
 .feunetre img {
@@ -16,4 +16,11 @@
 .logograph img {
     width: 45px;
     height: 45px;
+}
+
+.nom h1 {
+    font-size: 50px;
+    font-family: 'Gitant', sans-serif;
+    font-weight: bold;
+    color: #ED728C;
 }
