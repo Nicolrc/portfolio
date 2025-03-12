@@ -1,0 +1,44 @@
+.Grille {
+    background-color: #FFFBE8;
+    background-image:
+            linear-gradient(rgba(237, 114, 140, 0.6) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(237, 114, 140, 0.3)  1px, transparent 1px);
+    background-size: 90px 90px;
+    background-position: 0 0;
+    background-attachment: fixed;  /* Fixe la grille lors du défilement */
+    background-repeat: repeat;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .Grille {
+        background-size: 100px 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Grille {
+        background-size: 75px 75px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Grille {
+        background-size: 50px 50px;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
