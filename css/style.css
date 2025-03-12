@@ -1,11 +1,11 @@
 .reseaux img {
-    width: 42px;
-    height: 42px;
+    width: 35px;
+    height: 35px;
 }
 
 .feunetre img {
-    width: 45px;
-    height: 45px;
+    width: 20px;
+    height: 20px;
 }
 
 .logodev img {
@@ -19,8 +19,50 @@
 }
 
 .nom h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Gitant', sans-serif;
     font-weight: bold;
     color: #ED728C;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.nom {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.reseaux{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn_cv{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: 'Gitant', sans-serif;
+    font-weight: normal;
+    color: #ED728C;
+    font-size: 20px;
+    border: 2px solid #ED728C;
+    border-radius: 10px;
+    padding: 1px 15px;
 }
