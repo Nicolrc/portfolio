@@ -5,7 +5,7 @@
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    height: 37.5rem;
+    height: 35.5rem;
     gap: 6.25rem;
 }
 
@@ -87,4 +87,38 @@
     width: 85%;
     align-items: center;
 
+}
+
+/* Media queries pour le responsive */
+
+@media (max-width: 900px) {
+    .containerCard {
+        flex-direction: column;
+        height: auto;
+        gap: 3rem;
+        padding: 2rem 0;
+    }
+
+    .card-wrapper {
+        width: 80%;
+        max-width: 25rem;
+        height: 28rem; /* Hauteur fixe pour mobile */
+    }
+
+    .logodev img,
+    .logograph img
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .logodev, .logograph {
+        width: 30%;
+        max-width: 20rem;
+    }
+
+    /* Ajustement des tailles pour mobile */
+    .description h2 {
+        font-size: 1.3rem;
+    }
 }
