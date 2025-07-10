@@ -87,6 +87,12 @@ nav {
     font-weight: bold;
     color: #ED728C;
     line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.nom h1:hover
+{
+    color: #2B4A6B;
 }
 
 .st0{

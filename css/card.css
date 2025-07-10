@@ -1,5 +1,4 @@
 .containerCard{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,13 +8,21 @@
     gap: 6.25rem;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 28.125rem;
+    height: 32.5rem;
+}
+
 .card-wrapper{
     position: relative;
-    width: 40%;
-    max-width: 28.125rem;
-    height: 32.5rem;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s ease;
 }
+
 
 .card-wrapper:hover{
     transform: scale(1.05);
@@ -28,15 +35,15 @@
     left: 0.5rem;
     width: 100%;
     height: 100%;
-    border: 0.22rem solid #2B4A6B;
-    background: #FFFCEA;
+    border: 0.22rem solid var(--couleurTertiaire);
+    background: var(--couleurPrimaire);
     border-radius: 2.2rem;
     z-index: 1;
     transition: background-color 0.3s ease;
 }
 
 .card-wrapper:hover .card-background{
-    background: #2B4A6B;
+    background: var(--couleurTertiaire);
     top: 0.6rem;
     left: 0.6rem;
 }
@@ -50,12 +57,11 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    border: 0.22rem solid #2B4A6B;
+    border: 0.22rem solid var(--couleurTertiaire);
     border-radius: 2.2rem;
-    background: #FFFCEA;
+    background: var(--couleurPrimaire);
     z-index: 2;
 }
-
 
 .feunetre{
     justify-content: flex-end;
@@ -78,15 +84,14 @@
     font-size: 1.5rem;
     font-family: 'Gitant', sans-serif;
     font-weight: bold;
-    color: #2B4A6B;
+    color: var(--couleurTertiaire);
 }
 
 .description {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     width: 85%;
     align-items: center;
-
 }
 
 /* Media queries pour le responsive */
@@ -99,10 +104,9 @@
         padding: 2rem 0;
     }
 
-    .card-wrapper {
-        width: 80%;
-        max-width: 25rem;
-        height: 28rem; /* Hauteur fixe pour mobile */
+    .card-link {
+        max-width: 20rem;
+        height: 28rem;
     }
 
     .logodev img,
@@ -121,4 +125,131 @@
     .description h2 {
         font-size: 1.3rem;
     }
+}
+
+/*===========================================================*/
+                        /*projetsDev*/
+/*===========================================================*/
+
+.GrilleProjetDev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 35.5rem;
+    gap: 6.25rem;
+}
+
+.projectContenant
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 2rem;
+}
+
+.devWrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.devProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    border: 0.15rem solid var(--couleurTertiaire);
+    border-radius: 2.2rem;
+    background: var(--couleurPrimaire);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.devWrapper:hover .devProject {
+    transform: scale(1.02);
+}
+
+.encardCard {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    width: 85%;
+}
+
+.encardCard img {
+    width: 1rem;
+    height: auto;
+    transform: scale(0.98);
+    transition: transform 0.3s ease;
+}
+
+.stackContenant
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+.stackContenant p
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.8rem;
+    background: var(--AutreCouleur);
+    color: var(--couleurPrimaire);
+    font-family: Gitant, sans-serif;
+    font-style: normal;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+.stackContenant p:nth-of-type(2) {
+    background: var(--couleurSecondaire);
+}
+
+
+.devSeparator
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 1rem;
+    border-top: 0.10rem solid var(--couleurTertiaire);
+}
+
+.devProjectContent
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    margin-bottom: 1rem;
+    background: white;
+}
+
+.devTitle
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Gitant, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: var(--couleurTertiaire);
+    padding: 0 0 0 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+    margin: 0.2rem auto;
 }

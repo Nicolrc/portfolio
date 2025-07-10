@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/variable.css">
+    <title>La barbe du portfolio</title>
 </head>
 <body>
+<!-- Sprite SVG avec icônes sociales -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- GitHub -->
+    <symbol id="icon-github" viewBox="0 0 408.4 408.4">
+        <rect class="st1" width="408.4" height="408.4" rx="116.9" ry="116.9"/>
+        <path class="st0" d="M313.7,408.4H94.7c-52.2,0-94.7-42.5-94.7-94.7V94.7C0,42.5,42.5,0,94.7,0h219c52.2,0,94.7,42.5,94.7,94.7v219c0,52.2-42.5,94.7-94.7,94.7h0ZM94.7,18.4c-42.1,0-76.3,34.2-76.3,76.3v219c0,42.1,34.2,76.3,76.3,76.3h219c42.1,0,76.3-34.2,76.3-76.3V94.7c0-42.1-34.2-76.3-76.3-76.3H94.7Z"/>
+        <path class="st0" d="M204.2,82.8c-68.7,0-124.5,55.7-124.5,124.5s35.7,101.7,85.1,118.1c6.2,1.1,8.5-2.7,8.5-6s-.1-12.8-.2-23.2c-34.6,7.5-41.9-14.7-41.9-14.7-5.7-14.4-13.8-18.2-13.8-18.2-11.3-7.7.8-7.6.8-7.6,12.5.9,19.1,12.8,19.1,12.8,11.1,19,29.1,13.5,36.2,10.4,1.1-8,4.3-13.5,7.9-16.6-27.6-3.1-56.7-13.8-56.7-61.5s4.9-24.7,12.8-33.4c-1.3-3.1-5.6-15.8,1.2-32.9,0,0,10.4-3.4,34.2,12.8,9.9-2.8,20.6-4.1,31.2-4.2,10.6,0,21.2,1.4,31.2,4.2,23.8-16.1,34.2-12.8,34.2-12.8,6.8,17.1,2.5,29.8,1.2,32.9,8,8.7,12.8,19.8,12.8,33.4,0,47.8-29.1,58.3-56.8,61.4,4.5,3.9,8.4,11.4,8.4,23,0,16.6-.1,30.1-.1,34.2s2.2,7.2,8.6,6c49.4-16.5,85-63.1,85-118.1s-55.7-124.5-124.5-124.5h0Z"/>
+    </symbol>
 
+    <!-- Instagram -->
+    <symbol id="icon-instagram" viewBox="0 0 408.4 408.4">
+        <rect class="st1" width="408.4" height="408.4" rx="116.9" ry="116.9"/>
+        <path class="st0" d="M313.7,408.4H94.7c-52.2,0-94.7-42.5-94.7-94.7V94.7C0,42.5,42.5,0,94.7,0h219c52.2,0,94.7,42.5,94.7,94.7v219c0,52.2-42.5,94.7-94.7,94.7h0ZM94.7,18.4c-42.1,0-76.3,34.2-76.3,76.3v219c0,42.1,34.2,76.3,76.3,76.3h219c42.1,0,76.3-34.2,76.3-76.3V94.7c0-42.1-34.2-76.3-76.3-76.3H94.7Z"/>
+        <path class="st0" d="M204.2,101.8c33.4,0,37.3.1,50.5.7,12.2.6,18.8,2.6,23.2,4.3,5.8,2.3,10,5,14.4,9.3,4.4,4.4,7.1,8.5,9.3,14.4,1.7,4.4,3.8,11,4.3,23.2.6,13.2.7,17.1.7,50.5s-.1,37.3-.7,50.5c-.6,12.2-2.6,18.8-4.3,23.2-2.3,5.8-5,10-9.3,14.4s-8.5,7.1-14.4,9.3c-4.4,1.7-11,3.8-23.2,4.3-13.2.6-17.1.7-50.5.7s-37.3-.1-50.5-.7c-12.2-.6-18.8-2.6-23.2-4.3-5.8-2.3-10-5-14.4-9.3s-7.1-8.5-9.3-14.4c-1.7-4.4-3.8-11-4.3-23.2-.6-13.2-.7-17.1-.7-50.5s.1-37.3.7-50.5c.6-12.2,2.6-18.8,4.3-23.2,2.3-5.8,5-10,9.3-14.4,4.4-4.4,8.5-7.1,14.4-9.3,4.4-1.7,11-3.8,23.2-4.3,13.2-.6,17.1-.7,50.5-.7M204.2,79.3c-33.9,0-38.2.1-51.5.8-13.3.6-22.4,2.7-30.3,5.8-8.2,3.2-15.2,7.5-22.1,14.4-6.9,6.9-11.2,13.9-14.4,22.1-3.1,8-5.2,17-5.8,30.3-.6,13.3-.8,17.6-.8,51.5s.1,38.2.8,51.5c.6,13.3,2.7,22.4,5.8,30.3,3.2,8.2,7.5,15.2,14.4,22.1,6.9,6.9,13.9,11.2,22.1,14.4,8,3.1,17,5.2,30.3,5.8,13.3.6,17.6.8,51.5.8s38.2-.1,51.5-.8c13.3-.6,22.4-2.7,30.3-5.8,8.2-3.2,15.2-7.5,22.1-14.4,6.9-6.9,11.2-13.9,14.4-22.1,3.1-8,5.2-17,5.8-30.3.6-13.3.8-17.6.8-51.5s-.1-38.2-.8-51.5c-.6-13.3-2.7-22.4-5.8-30.3-3.2-8.2-7.5-15.2-14.4-22.1-6.9-6.9-13.9-11.2-22.1-14.4-8-3.1-17-5.2-30.3-5.8-13.3-.6-17.6-.8-51.5-.8ZM204.2,140.1c-35.4,0-64.1,28.7-64.1,64.1s28.7,64.1,64.1,64.1,64.1-28.7,64.1-64.1-28.7-64.1-64.1-64.1h0ZM204.2,245.9c-23,0-41.6-18.6-41.6-41.6s18.6-41.6,41.6-41.6,41.6,18.6,41.6,41.6-18.6,41.6-41.6,41.6h0ZM285.9,137.5c0,8.3-6.7,15-15,15s-15-6.7-15-15,6.7-15,15-15,15,6.7,15,15Z"/>
+    </symbol>
+
+    <!-- LinkedIn -->
+    <symbol id="icon-linkedin" viewBox="0 0 408.4 408.4">
+        <rect class="st1" width="408.4" height="408.4" rx="116.9" ry="116.9"/>
+        <path class="st0" d="M313.7,408.4H94.7c-52.2,0-94.7-42.5-94.7-94.7V94.7C0,42.5,42.5,0,94.7,0h219c52.2,0,94.7,42.5,94.7,94.7v219c0,52.2-42.5,94.7-94.7,94.7ZM94.7,18.4c-42.1,0-76.3,34.2-76.3,76.3v219c0,42.1,34.2,76.3,76.3,76.3h219c42.1,0,76.3-34.2,76.3-76.3V94.7c0-42.1-34.2-76.3-76.3-76.3H94.7Z"/>
+        <path class="st0" d="M124.3,107.8c-15.5,0-24.8,9.3-24.8,21.7s9.3,21.6,23.2,21.6,24.8-9.3,24.8-21.6-9.3-21.7-23.2-21.7ZM100.8,174.3v126.4h45.6v-126.4h-45.6ZM184,174.3v126.4h45.6v-69.1c0-20.6,14.7-23.5,19.1-23.5s16.2,4.4,16.2,23.5v69.1h44.1v-69.1c0-39.7-17.6-57.3-39.7-57.3s-33.8,7.3-39.7,17.6v-17.6h-45.6,0Z"/>
+    </symbol>
+</svg>
+<div class="Grille">
+    <header>
+        <nav>
+            <div class="cv">
+                <a href="https://ugc.production.linktr.ee/335f0bf7-d2ad-45ad-af68-4c1216f70c88_cv-nicolas-leriche-2025.pdf" target="_blank">CV</a>
+            </div>
+            <div class="nom">
+                <a href="index.html" style="text-decoration: none;">
+                    <h1>Nicolas Leriche</h1>
+                </a>
+            </div>
+            <div class="reseaux">
+                <a href="https://github.com/Nicolrc" target="_blank">
+                    <svg class="github">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/labarbedugraphiste/" target="_blank">
+                    <svg class="instagram">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/nicolasleriche/" target="_blank">
+                    <svg class="linkedin">
+                        <use xlink:href="#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="GrilleProjetDev">
+        <div class="projectContenant">
+            <a href="" style="text-decoration: none;">
+                <div class="devWrapper">
+                    <div class="devProject">
+                        <div class="encardCard">
+                            <div class="stackContenant">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <img src="../img/winmoins.svg" alt="" aria-hidden="true">
+                            <img src="../img/winfeunetre.svg" alt="" aria-hidden="true">
+                            <img src="../img/wincroix.svg" alt="" aria-hidden="true">
+                        </div>
+                        <div class="devProjectContent">
+                            <div style="display: flex; justify-content: center; align-items: center; color: #2B4A6B; height: 100%">projetsDevs</div>
+                        </div>
+                        <hr class="devSeparator">
+                        <div class="devTitle">TICKETING</div>
+                    </div>
+                </div>
+            </a>
+            <a href="" style="text-decoration: none;">
+                <div class="devWrapper">
+                    <div class="devProject">
+                        <div class="encardCard">
+                            <div class="stackContenant">
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                            <img src="../img/winmoins.svg" alt="" aria-hidden="true">
+                            <img src="../img/winfeunetre.svg" alt="" aria-hidden="true">
+                            <img src="../img/wincroix.svg" alt="" aria-hidden="true">
+                        </div>
+                        <div class="devProjectContent">
+                            <div style="display: flex; justify-content: center; align-items: center; color: #2B4A6B; height: 100%">projetsDevs</div>
+                        </div>
+                        <hr class="devSeparator">
+                        <div class="devTitle">TICKETING</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="pied">
+        <div class="mail">
+            <p>
+                <a href="mailto:nicolas.leriche96@gmail.com" target="_blank">nicolas.leriche96@gmail.com</a>
+            </p>
+        </div>
+        <div class="apropos">
+            <a href="#">A propos</a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
